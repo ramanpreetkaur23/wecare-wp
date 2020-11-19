@@ -14,41 +14,6 @@
 	<script src="js/html5shiv.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-
-    <!-- CSS Files
-    ================================================== -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/plugin.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">	
-    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">	
-	<link rel="stylesheet" href="css/twentytwenty.css" type="text/css"> -->
-
-    <!-- custom background -->
-    <!-- <link rel="stylesheet" href="css/bg.css" type="text/css"> -->
-
-    <!-- color scheme -->
-	<!-- <link rel="stylesheet" href="css/colors/green.css" type="text/css" id="colors">
-    <link rel="stylesheet" href="css/color.css" type="text/css"> -->
-
-    <!-- load fonts -->
-    <!-- <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css"> -->
-
-    <!-- RS5.0 Stylesheet -->
-    <!-- <link rel="stylesheet" href="revolution/css/settings.css" type="text/css">
-    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css">
-    <link rel="stylesheet" href="revolution/css/navigation.css" type="text/css">
-    <link rel="stylesheet" href="css/rev-settings.css" type="text/css"> -->
-	
-	<!-- custom font -->
-	<!-- <link rel="stylesheet" href="css/font-style-2.css" type="text/css"> -->
 </head>
 
 <body id="homepage">
@@ -65,7 +30,7 @@
 							<i class="icon_clock_alt"></i>
 							<div class="info-box_text">
 								<div class="info-box_title"><span class="id-color">Opening Times</span></div>
-                                <div class="info-box_subtite">Monday - Friday: 09:00 - 18:00</div>
+                                <div class="info-box_subtite"><?php print get_option( 'timings' ); ?></div>
 							</div>
 						</div>
 					</div>
@@ -73,8 +38,17 @@
 					<div class="col-lg-4 col-md-12 text-center">
                         <!-- logo begin -->
                         <div id="logo">
+
+						<!-- custom logo -->
+						<?php
+						if(function_exists('the_custom_logo')){
+
+							$custom_logo_id = get_theme_mod('custom_logo');
+							$logo = wp_get_attachment_image_src( $custom_logo_id );
+						}
+						?>
                             <a href="index.html">
-                                <img class="logo" src=<?php echo get_template_directory_uri() ."/images-kitchen/logo.png"?> alt="">
+                                <img class="logo" src="<?php echo $logo ?  $logo[0]: get_template_directory_uri() ."/images-kitchen/logo.png" ?>" alt="">
                             </a>
                         </div>
                         <!-- logo close -->
@@ -89,7 +63,7 @@
 							<i class="icon_house_alt"></i>
 							<div class="info-box_text">
 								<div class="info-box_title"><span class="id-color">Customer Service</span></div>
-								<div class="info-box_subtite">+208 333 9296</div>
+								<div class="info-box_subtite"><?php print get_option( 'contact_number' ); ?></div>
 							</div>
 						</div>
 					</div>
@@ -106,7 +80,8 @@
 							
 							<!-- mainmenu begin -->
 							<nav>
-								<ul id="mainmenu">
+							    
+								<!-- <ul id="mainmenu">
 									<li><a href="index.html">Home<span></span></a>
 										<ul class="mega">
 											<li>
@@ -335,7 +310,7 @@
 										</ul>
 									</li>
 									<li><a href="contact.html">Contact</a></li>
-								</ul>
+								</ul> -->
 							</nav>
 							
 							<!-- mainmenu close -->
