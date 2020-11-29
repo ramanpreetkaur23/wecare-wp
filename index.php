@@ -8,47 +8,10 @@
     <meta name="description" content="Archi is best selling interior design website template with responsive stunning design">
     <meta name="keywords" content="architecture,building,business,bootstrap,creative,exterior design,furniture design,gallery,garden design,house,interior design,landscape design,multipurpose,onepage,portfolio,studio">
     <meta name="author" content="">
-
-
     <!--[if lt IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-
-    <!-- CSS Files
-    ================================================== -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/plugin.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">	
-    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">	
-	<link rel="stylesheet" href="css/twentytwenty.css" type="text/css"> -->
-
-    <!-- custom background -->
-    <!-- <link rel="stylesheet" href="css/bg.css" type="text/css"> -->
-
-    <!-- color scheme -->
-	<!-- <link rel="stylesheet" href="css/colors/green.css" type="text/css" id="colors">
-    <link rel="stylesheet" href="css/color.css" type="text/css"> -->
-
-    <!-- load fonts -->
-    <!-- <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css"> -->
-
-    <!-- RS5.0 Stylesheet -->
-    <!-- <link rel="stylesheet" href="revolution/css/settings.css" type="text/css">
-    <link rel="stylesheet" href="revolution/css/layers.css" type="text/css">
-    <link rel="stylesheet" href="revolution/css/navigation.css" type="text/css">
-    <link rel="stylesheet" href="css/rev-settings.css" type="text/css"> -->
-	
-	<!-- custom font -->
-	<!-- <link rel="stylesheet" href="css/font-style-2.css" type="text/css"> -->
 </head>
 
 <body id="homepage">
@@ -65,7 +28,7 @@
 							<i class="icon_clock_alt"></i>
 							<div class="info-box_text">
 								<div class="info-box_title"><span class="id-color">Opening Times</span></div>
-                                <div class="info-box_subtite">Monday - Friday: 09:00 - 18:00</div>
+                                <div class="info-box_subtite"><?php print get_option( 'timings' ); ?></div>
 							</div>
 						</div>
 					</div>
@@ -73,8 +36,17 @@
 					<div class="col-lg-4 col-md-12 text-center">
                         <!-- logo begin -->
                         <div id="logo">
+
+						<!-- custom logo -->
+						<?php
+						if(function_exists('the_custom_logo')){
+
+							$custom_logo_id = get_theme_mod('custom_logo');
+							$logo = wp_get_attachment_image_src( $custom_logo_id );
+						}
+						?>
                             <a href="index.html">
-                                <img class="logo" src=<?php echo get_template_directory_uri() ."/images-kitchen/logo.png"?> alt="">
+                                <img class="logo" src="<?php echo $logo ?  $logo[0]: get_template_directory_uri() ."/images-kitchen/logo.png" ?>" alt="">
                             </a>
                         </div>
                         <!-- logo close -->
@@ -89,12 +61,10 @@
 							<i class="icon_house_alt"></i>
 							<div class="info-box_text">
 								<div class="info-box_title"><span class="id-color">Customer Service</span></div>
-								<div class="info-box_subtite">+208 333 9296</div>
+								<div class="info-box_subtite"><?php print get_option( 'contact_number' ); ?></div>
 							</div>
 						</div>
-					</div>
-					
-					
+					</div>			
 				</div>
 			</div>
 
@@ -106,236 +76,14 @@
 							
 							<!-- mainmenu begin -->
 							<nav>
-								<ul id="mainmenu">
-									<li><a href="index.html">Home<span></span></a>
-										<ul class="mega">
-											<li>
-												<div class="container-fluid">
-													<div class="menu-content">
-														<div class="row">
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li><a href="08_index-architect.html">New: Architect</a></li>
-																	<li><a href="index-onepage-stacked.html">New: Onepage Stacked</a></li>
-																	<li><a href="07_index-photography.html">New: Photography</a></li>
-																	<li><a href="06_index-architecture.html">Architecture</a></li>	
-																	<li><a href="05_index-consulting.html">Consulting</a></li>	
-																	<li><a href="03_index-apartment.html">Apartment</a></li>	
-																	<li><a href="04_index-kitchen.html">Kitchen</a></li>
-																	<li><a href="02_index-webstudio.html">Web Studio</a></li>
-																	<li><a href="index.html">Original</a></li>
-																	<li><a href="index-modern.html">Modern</a></li>
-																	<li><a href="index-studio.html">Studio</a></li>
-																	<li><a href="index-coworking.html">Coworking</a></li>
-																	<li><a href="index-before-after.html">Before After</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li><a href="index-landing-product.html">Product Landing</a></li>
-																	<li><a href="index-arts.html">Arts</a></li>
-																	<li><a href="index-light.html">Original Light</a></li>
-																	<li><a href="index-elegant.html">Elegant</a></li>
-																	<li><a href="index-header-bottom.html">Bottom Navigation</a></li>
-																	<li><a href="index-header-bottom-light.html">Bottom Navigation Light</a></li>
-																	<li><a href="index-sidebar.html">Side Navigation</a></li>
-																	<li><a href="sidebar-light-index.html">Side Navigation Light</a></li>
-																	<li><a href="index-landing-page.html">Onepage Landing</a></li>
-																	<li><a href="index-landing-page-light.html">Onepage Landing Light</a></li>
-																	<li><a href="index-minimal.html">Minimal</a></li>			
-																	<li><a href="index-corporate.html">Corporate</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>																	
-																	<li><a href="01_index-minisite.html">Minisite</a></li>
-																	<li><a href="index-onepage.html">Onepage</a></li>
-																	<li><a href="index-onepage-light.html">Onepage Light</a></li>
-																	<li><a href="index-masonry-med-4-cols.html">Masonry</a></li>
-																	<li><a href="index-masonry-light-med-4-cols.html">Masonry Light</a></li>
-																	<li><a href="index-profession.html">Profession</a></li>
-																	<li><a href="index-profession-light.html">Profession Light</a></li>
-																	<li><a href="index-portfolio-minimal.html">Portfolio Minimal</a></li>
-																	<li><a href="index-snowy.html">Snowy</a></li>
-																	<li><a href="index-coming-soon.html">Coming Soon Page</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li><a href="index-rtl.html">Home (RTL)</a></li>
-																	<li><a href="index-hero-slider.html">Hero Slider</a></li>
-																	<li><a href="index-hero-particle.html">Hero Particle</a></li>
-																	<li><a href="index-hero-parallax.html">Hero Parallax</a></li>
-																	<li><a href="index-hero-video.html">Hero Video Background</a></li>
-																	<li><a href="index-hero-youtube.html">Hero Youtube Background</a></li>
-																	<li><a href="index-hero-looping-image.html">Hero Looping Image</a></li>
-																</ul>
-															</div>
-															
-															
-														</div>
-													</div>
-												</div>
-											</li>                                        
-										</ul>
-									</li>
-									<li><a href="#">Pages</a>
-										<ul class="mega">
-											<li>
-												<div class="container-fluid">
-													<div class="menu-content">
-														<div class="row">
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li class="title">Pages</li>
-																	<li><a href="pricing-table-3-cols.html">Pricing 3 Cols</a></li>
-																	<li><a href="pricing-table-4-cols.html">Pricing 4 Cols</a></li>
-																	<li><a href="faq.html">FAQ</a></li>
-																	<li><a href="about.html">About Us</a></li>
-																	<li><a href="about-rtl.html">About Us (RTL)</a></li>
-																	<li><a href="pricing-table-3-cols-light.html">Pricing 3 Cols Light</a></li>
-																	<li><a href="pricing-table-4-cols-light.html">Pricing 4 Cols Light</a></li>
-																	<li><a href="faq-light.html">FAQ Light</a></li>
-																	<li><a href="about-light.html">About Us Light</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li class="title">Headers</li>
-																	<li><a href="header-custom-style-1.html">Extended Header 1</a></li>
-																	<li><a href="header-custom-style-2.html">Extended Header 2</a></li>
-																	<li><a href="header-custom-style-3.html">Extended Header 3</a></li>
-																	<li><a href="header-custom-style-1-light.html">Extended Header Light 1</a></li>
-																	<li><a href="header-custom-style-2-light.html">Extended Header Light 2</a></li>
-																	<li><a href="header-custom-style-3-light.html">Extended Header Light 3</a></li>
-																	<li><a href="index.html">Header Default</a></li>
-																	<li><a href="index-header-bottom.html">Header Bottom</a></li>
-																	<li><a href="index-sidebar.html">Header Side</a></li>
-																	<li><a href="index-arts.html">Header Autoshow</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li class="title">Elements</li>
-																	<li><a href="icons-fontawesome.html">768 FontAwesome Icons</a></li>
-																	<li><a href="icons-elegant.html">358 Elegant Icons</a></li>
-																	<li><a href="icons-etline.html">100 Etline Icons</a></li>
-																	<li><a href="accordion.html">Accordion</a></li>
-																	<li><a href="alerts.html">Alerts</a></li>
-																	<li><a href="before-after.html">Before After</a></li>
-																	<li><a href="buttons.html">Buttons</a></li>
-																	<li><a href="carousel.html">Carousel</a></li>
-																	<li><a href="countdown.html">Countdown</a></li>
-																	<li><a href="counters.html">Counters</a></li>
-																</ul>
-															</div>
-															
-															<div class="col-lg-3 col-md-12">
-																<ul>
-																	<li class="title">Elements</li>
-																	<li><a href="form-style.html">Form Style</a></li>
-																	<li><a href="icon-box.html">Icon Box</a></li>
-																	<li><a href="modal.html">Modal</a></li>
-																	<li><a href="skill-bar.html">Skill Bar</a></li>
-																	<li><a href="steps.html">Steps</a></li>
-																	<li><a href="tabs.html">Tabs</a></li>
-																	<li><a href="team.html">Team</a></li>
-																	<li><a href="timeline.html">Timeline</a></li>
-																</ul>
-															</div>
-															
-															<div class="clearfix"></div>
-														</div>
-													</div>
-												</div>
-											</li>                                        
-										</ul>
-									</li>
-									<li><a href="project-wide-4-cols.html">Projects</a>
-										<ul>
-											<li><a href="project-wide-4-cols.html">Wide Style</a>
-												<ul>
-													<li><a href="project-wide-2-cols.html">2 Cols Wide</a></li>
-													<li><a href="project-wide-3-cols.html">3 Cols Wide</a></li>
-													<li><a href="project-wide-4-cols.html">4 Cols Wide</a></li>
-												</ul>
-											</li>
-											<li><a href="project-contained-3-cols.html">Contained Style</a>
-												<ul>
-													<li><a href="project-contained-2-cols.html">2 Cols Contained</a></li>
-													<li><a href="project-contained-3-cols.html">3 Cols Contained</a></li>
-													<li><a href="project-contained-4-cols.html">4 Cols Contained</a></li>
-												</ul>
-											</li>
-											<li><a href="project-carousel-3-cols.html">Carousel Style</a>
-												<ul>
-													<li><a href="project-carousel-2-cols.html">2 Cols Carousel</a></li>
-													<li><a href="project-carousel-3-cols.html">3 Cols Carousel</a></li>
-													<li><a href="project-carousel-4-cols.html">4 Cols Carousel</a></li>
-												</ul>
-											</li>
-											<li><a href="project-inverted-3-cols.html">Inverted Style</a>
-												<ul>
-													<li><a href="project-inverted-2-cols.html">2 Cols Inverted</a></li>
-													<li><a href="project-inverted-3-cols.html">3 Cols Inverted</a></li>
-													<li><a href="project-inverted-4-cols.html">4 Cols Inverted</a></li>
-												</ul>
-											</li>
-											<li><a href="project-contained-3-cols.html">Masonry Gallery</a>
-												<ul>
-													<li><a href="project-masonry-4-cols.html">3 Cols Masonry</a></li>
-													<li><a href="project-masonry-3-cols.html">4 Cols Masonry</a></li>
-												</ul>
-											</li>
-											<li><a href="project-contained-3-cols.html">Simple Gallery</a>
-												<ul>
-													<li><a href="gallery-2-cols.html">2 Cols</a></li>
-													<li><a href="gallery-3-cols.html">3 Cols</a></li>
-													<li><a href="gallery-4-cols.html">4 Cols</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Misc</a>
-												<ul>
-													<li><a href="project-before-after.html">Before After</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="services.html">Services</a>
-										<ul>
-											<li><a href="service-1.html">Residential Design</a></li>
-											<li><a href="service-2.html">Hospitaly Design</a></li>
-											<li><a href="service-3.html">Office Design</a></li>
-											<li><a href="service-4.html">Commercial Design</a></li>
-											<li><a href="services.html">All Services</a></li>
-											<li><a href="services-style-2.html">New All Services</a></li>
-										</ul>
-									</li>
-									<li><a href="blog.html">Blog</a>
-										<ul>
-											<li><a href="blog.html">Right Sidebar</a></li>
-											<li><a href="blog-light.html">Right Sidebar Light</a></li>										
-											<li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-											<li><a href="blog-left-sidebar-light.html">Left Sidebar Light</a></li>
-											<li><a href="blog-single.html">Single</a></li>
-											<li><a href="blog-single-light.html">Single Light</a></li>
-										</ul>
-									</li>
-									<li><a href="shop.html">Shop</a>
-										<ul>
-											<li><a href="shop.html">Shop Dark</a></li>
-											<li><a href="shop-light.html">Shop Light</a></li>
-											<li><a href="product-single.html">Product Single</a></li>
-											<li><a href="product-single-light.html">Product Single Light</a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
+							<?php     
+							    wp_nav_menu( array( 
+									'theme_location' => 'main_nav', 
+									'container' => 'ul', 
+									'walker'=> new P_menu_walker(), 
+									'items_wrap' => '<ul id="mainmenu" class="dotted-seperator">%3$s</ul>'
+								) )
+							?> 
 							</nav>
 							
 							<!-- mainmenu close -->
@@ -361,7 +109,6 @@
                             <!--  BACKGROUND IMAGE -->
 							<img alt="" class="rev-slidebg" data-bgparallax="0" src=<?php echo get_template_directory_uri() ."/images-kitchen/slider/wide1.jpg"?>>
                             
-							<div class="tp-caption big-white sft" data-x="center" data-y="250" data-width="none" data-height="none" data-whitespace="nowrap"  data-speed="800" data-start="400" data-easing="easeInOutExpo"
 							<div class="tp-caption big-white sft" data-x="center" data-y="280" data-width="none" data-height="none" data-whitespace="nowrap"  data-speed="800" data-start="400" data-easing="easeInOutExpo"
                                 data-endspeed="450" >
                                 Archi Kitchen
@@ -383,7 +130,6 @@
                             <!--  BACKGROUND IMAGE -->
 							<img alt="" class="rev-slidebg" data-bgparallax="0" src=<?php echo get_template_directory_uri() ."/images-kitchen/slider/wide2.jpg" ?> >
                             
-							<div class="tp-caption big-white sft" data-x="center" data-y="250" data-width="none" data-height="none" data-whitespace="nowrap"  data-speed="800" data-start="400" data-easing="easeInOutExpo"
 							<div class="tp-caption big-white sft" data-x="center" data-y="280" data-width="none" data-height="none" data-whitespace="nowrap"  data-speed="800" data-start="400" data-easing="easeInOutExpo"
                                 data-endspeed="450" >
                                 Archi Kitchen
@@ -649,77 +395,6 @@
             </section>
             <!-- section close -->
 			
-			
-			<section id="section-why-choose-us-2">
-
-                <div class="container">
-                    <div class="row">
-							<div class="col-md-6 offset-md-3 text-light text-center wow fadeInUp">
-								<h1>Kitchen Type</h1>
-								<div class="separator"><span><i class="fa fa-square"></i></span></div>
-								<div class="spacer-single"></div>
-							</div>
-							
-							<div class="clearfix"></div>
-							
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay="0s">
-								<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r1.jpg" ?> class="img-responsive" alt="">
-								
-                                <div class="text padding30" data-bgcolor="#111111">									
-                                    <h3>U-Shaped Kitchen</h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-                                </div>
-							</div>
-
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay=".3s">
-									<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r2.jpg" ?> class="img-responsive" alt="">
-									<div class="text padding30" data-bgcolor="#111111">									
-										<h3>L-Shaped Kitchen</h3>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-									</div>
-									
-									
-							</div>
-
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay=".6s">
-									<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r3.jpg" ?> class="img-responsive" alt="">
-									
-									<div class="text padding30" data-bgcolor="#111111">									
-										<h3>Island Kitchen</h3>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-									</div>
-							</div>
-							
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay="0s">
-									<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r4.jpg" ?> class="img-responsive" alt="">
-									<div class="text padding30" data-bgcolor="#111111">									
-										<h3>Parallel Kitchen</h3>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-									</div>
-							</div>
-
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay=".3s">
-									<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r5.jpg"?> class="img-responsive" alt="">
-									<div class="text padding30" data-bgcolor="#111111">									
-										<h3>Straight Kitchen</h3>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-									</div>
-							</div>
-							
-							<div class="col-lg-4 mb30 wow fadeInUp" data-wow-delay=".6s">
-									<img src=<?php echo get_template_directory_uri() ."/images-kitchen/misc/r6.jpg" ?> class="img-responsive" alt="">
-									<div class="text padding30" data-bgcolor="#111111">									
-										<h3>Modular Kitchen</h3>
-										<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-									</div>
-							</div>
-							
-						</div>
-                        
-                    </div>
-					
-            </section>
-			
 			<section class="bg-color">
 				<div class="container">
 					<div class="row">
@@ -748,23 +423,26 @@
 							<div id="testimonial-carousel-single" class="owl-carousel owl-theme wow fadeInUp">
 								<blockquote class="testimonial-big">
 									<span class="title">Big attention to details!</span>
-									I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+									I am impressed with the services they provide. Their team is great. They really took the time to understand
+                                    my style and helped me express myself in my home. The team's attention to details are phenomenal. They did 
+                                    an amazing job blending my old and new furniture and decor. I'd definitely recommend them.
 
-									<span class="name">John, Customer</span>
+									<span class="name">Ashutosh, Customer</span>
 								</blockquote>
 								
 								<blockquote class="testimonial-big">
 									<span class="title">Modern and great design!</span>
-									Just wow! I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
-									<span class="name">Sandra, Customer</span>
+                                    I absolutely loved working with wecare. They made the entire renovation an amazing experience.
+                                    Their designs are great and very modern. I would definitely recommend them to anyone.
+									<span class="name">Ashish, Customer</span>
 								</blockquote>
 								
 								<blockquote class="testimonial-big">
 									<span class="title">Better than we think!</span>
-									I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-
-									<span class="name">Michael, Customer</span>
+									wecare services are absolutely amazing, which is why we engaged them for multiple projects! 
+                                    Always client centric, solution oriented, programatic in their approach. If you want a team that will
+                                    continously exceed your expectations while managing your project from start to finish, look no further just hire them.
+									<span class="name">Santosh, Customer</span>
 								</blockquote>
 							</div>
 							
@@ -865,35 +543,34 @@
             <footer>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
-                            <img src=<?php echo get_template_directory_uri() ."/images-kitchen/logo.png"?> class="logo-small" alt=""><br> We are team based on Los Angeles. Our
-                            expertise on Interior Design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-                            et quasi architecto beatae vitae dicta sunt explicabo.
+                        <div  class="col-md-4">
+                            <!-- custom logo -->
+                            <?php
+                            if(function_exists('the_custom_logo')){
+
+                                $custom_logo_id = get_theme_mod('custom_logo');
+                                $logo = wp_get_attachment_image_src( $custom_logo_id );
+                            }
+                            ?>
+                                <a href="index.html">
+                                    <img class="logo-small" src="<?php echo $logo ?  $logo[0]: get_template_directory_uri() ."/images-kitchen/logo.png" ?>" alt="">
+                                </a><br>
+                            <!-- logo close -->
+                            Our vision is to ensure the longevity of our company through repeat and referral business achieved by
+                            customer satisfaction in all areas including timeliness, attention to detail and service-minded attitude. 
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="widget widget_recent_post">
-                                <h3>Latest News</h3>
-                                <ul>
-                                    <li><a href="blog-single.html">5 Things That Take a Room from Good to Great</a></li>
-                                    <li><a href="blog-single.html">Functional and Stylish Wall-to-Wall Shelves</a></li>
-                                    <li><a href="blog-single.html">9 Unique and Unusual Ways to Display Your TV</a></li>
-                                    <li><a href="blog-single.html">The 5 Secrets to Pulling Off Simple, Minimal Design</a></li>
-                                    <li><a href="blog-single.html">How to Make a Huge Impact With Multiples</a></li>
-                                </ul>
-                            </div>
+                        <div class="col-md-3">
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-5">
                             <h3>Contact Us</h3>
                             <div class="widget widget-address">
                                 <address>
-                                    <span>100 S Main St, Los Angeles, CA</span>
-                                    <span><strong>Phone:</strong>(208) 333 9296</span>
-                                    <span><strong>Fax:</strong>(208) 333 9298</span>
-                                    <span><strong>Email:</strong><a href="mailto:contact@archi-interior.com">contact@archi-interior.com</a></span>
-                                    <span><strong>Web:</strong><a href="#">http://archi-interior.com</a></span>
+                                    <span><?php print get_option( 'address' ); ?></span>
+                                    <span><strong>Phone:</strong><a href="tel:+<?php print get_option( 'contact_number' ); ?>"><?php print get_option( 'contact_number' ); ?></a></span>
+                                    <span><strong>Email:</strong><a href="mailto:<?php print get_option( 'email_handler' ); ?>"><?php print get_option( 'email_handler' ); ?></a></span>
+                                    <span><strong>Web:</strong><a href="#">xyz.com</a></span>
                                 </address>
                             </div>
                         </div>
@@ -904,16 +581,12 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                &copy; Copyright 2020 - Archi Interior Design Template by <span>Designesia</span>
+                                &copy; Copyright 2020-Design by <a href="mailto:ramanpreetkaur931@gmail.com">Ramanpreet Kaur</a>
                             </div>
                             <div class="col-md-6 text-right">
                                 <div class="social-icons">
                                     <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                                     <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-rss fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-skype fa-lg"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -925,56 +598,10 @@
         </div>
     </div>
 
-    <div id="purchase-now">
-    	<a href="https://themeforest.net/item/archi-interior-design-website-template/10940889"><span>$</span>20</a>
-    	<div class="pn-hover">Buy Now</div>
-    </div>
 
     <!-- Javascript Files
 	================================================== -->
 	<?php wp_footer(); ?>
-	<!-- <script src="js/jquery.min.js"></script>
-	
-    <script src="js/jpreLoader.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	
-    <script src="js/jquery.isotope.min.js"></script>
-	<script src="js/easing.js"></script>
-	
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.scrollto.js"></script>
-    <script src="js/owl.carousel.js"></script>
-	<script src="js/jquery.countTo.js"></script>
-	
-    <script src="js/classie.js"></script>
-	<script src="js/video.resize.js"></script>
-	
-    <script src="js/validation.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-	<script src="js/enquire.min.js"></script>	
-    <script src="js/jquery.plugin.js"></script>
-	<script src="js/jquery.countdown.js"></script>	
-    <script src="js/countdown-custom.js"></script>
-    <script src="js/designesia.js"></script>	
-	<script src="js/jquery.event.move.js"></script>
-    <script src="js/jquery.twentytwenty.js"></script>	 -->
-	
-
-    <!-- RS5.0 Core JS Files -->
-    <!-- <script src="revolution/js/jquery.themepunch.tools.min838f.js?rev=5.0"></script>
-    <script src="revolution/js/jquery.themepunch.revolution.min838f.js?rev=5.0"></script> -->
-
-    <!-- RS5.0 Extensions Files -->
-    <!-- <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="http://interior.test/wp-content/themes/kitchen/revolution/js/extensions/revolution.extension.parallax.min.js"></script> -->
 
     <script>
         jQuery(document).ready(function() {

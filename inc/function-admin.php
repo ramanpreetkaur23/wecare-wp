@@ -1,12 +1,3 @@
-<!-- 
-//Faceboook handle
-//@email
-//@phone 
-// address -> TextBox
-// timing
-// logo
- -->
-
 <?php
 
 /*
@@ -14,12 +5,18 @@
             ADMIN PAGE
      ========================================
 */
+class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
+    
+}
+$x  = new Primary_Walker_Nav_Menu();
+
+// $x.
 
 function interior_add_admin_page(){
 
     // Generate Interior Admin Page
     add_menu_page( 'Interior Theme Options', 'Interior', 'manage_options','interior_custom',
-                    'interior_theme_settings_page', 'dashicons-admin-customizer', 110 );
+'interior_theme_settings_page', 'dashicons-admin-customizer', 110 );
 
     // Generate Interior Admin Sub Pages
     add_submenu_page( 'interior_custom', 'Interior Settings', 'Settings', 'manage_options',
