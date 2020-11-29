@@ -31,8 +31,8 @@ function interior_load_scripts(){
     wp_enqueue_style( 'bg_css');
 
     //css color scheme
-    wp_register_style('colorgreen_css', get_template_directory_uri() . '/css/colors/green.css' , array(), 'false','all');
-    wp_enqueue_style( 'colorgreen_css');
+    wp_register_style('colorred_css', get_template_directory_uri() . '/css/colors/red.css' , array(), 'false','all');
+    wp_enqueue_style( 'colorred_css');
     wp_register_style('color_css', get_template_directory_uri() . '/css/color.css' , array(), 'false','all');
     wp_enqueue_style( 'color_css');
 

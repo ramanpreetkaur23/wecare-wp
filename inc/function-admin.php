@@ -1,12 +1,3 @@
-<!-- 
-//Faceboook handle
-//@email
-//@phone 
-// address -> TextBox
-// timing
-// logo
- -->
-
 <?php
 
 /*
@@ -14,8 +5,12 @@
             ADMIN PAGE
      ========================================
 */
+class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
+    
+}
+$x  = new Primary_Walker_Nav_Menu();
 
-
+// $x.
 
 function interior_add_admin_page(){
 

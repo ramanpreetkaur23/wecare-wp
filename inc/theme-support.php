@@ -13,10 +13,10 @@ add_action( 'after_setup_theme', 'interior_theme_support' );
 function interior_menus(){
 
     $location =array(
-        'primary' => 'Main Menu'
+        'main_nav' => 'Main Nav',
     );
 
     register_nav_menus( $location );
 }
 
-add_action( 'init', 'interior_menus' );
+add_action( 'after_setup_theme', 'interior_menus' );
