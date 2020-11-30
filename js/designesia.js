@@ -563,7 +563,8 @@ jQuery(document).ready(function () {
 			items:3,
 			loop:true,
 			dots: false,
-			margin:0,
+            margin:0,
+            autoplay: true,
 			responsive:{
 				1000:{
 					items:3
