@@ -215,13 +215,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href="images-kitchen/portfolio/1.jpg">
+									<a class="image-popup-no-margins" href="images-kitchen/portfolio/1p.jpg">
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Alaska</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/1.jpg" ?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/1p.jpg" ?> alt="" />
 									</a>
 								</div>
 							</div>
@@ -230,13 +230,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href="images-kitchen/portfolio/2.jpg">
+									<a class="image-popup-no-margins" href="images-kitchen/portfolio/2p.jpg">
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Montana</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/2.jpg" ?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/2p.jpg" ?> alt="" />
 									</a>
 								</div>
 							</div>
@@ -245,13 +245,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/3.jpg"?>>
+									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/3p.jpg"?>>
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Oklahoma</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/3.jpg" ?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/3p.jpg" ?> alt="" />
 									</a>
 								</div>
 							</div>
@@ -260,13 +260,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/4.jpg"?>>
+									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/4p.jpg"?>>
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Virginia</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/4.jpg"?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/4p.jpg"?> alt="" />
 									</a>                        
 								</div>
 							</div>
@@ -275,13 +275,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/5.jpg"?>>
+									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/5p.jpg"?>>
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Washington</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/5.jpg" ?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/5p.jpg" ?> alt="" />
 									</a>                        
 								</div>
 							</div>
@@ -290,13 +290,13 @@
 							<!-- gallery item -->
 							<div class="item s2">
 								<div class="picframe">
-									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/6.jpg"?>>
+									<a class="image-popup-no-margins" href=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/6p.jpg"?>>
 										<span class="overlay-v">
 											<span class="pf_text">
-												<span class="project-name">Minnesota</span>
+												<span class="project-name"></span>
 											</span>
 										</span>
-										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/6.jpg" ?> alt="" />
+										<img src=<?php echo get_template_directory_uri() ."/images-kitchen/portfolio/6p.jpg" ?> alt="" />
 									</a>                        
 								</div>
 							</div>
@@ -325,9 +325,9 @@
                             <div class="box-number">
                                <i class="bg-color text-light icon_ribbon_alt"></i>
                                 <div class="text">
-                                    <h3><span>Certified Designer</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <h3><span>Attention to Details</span></h3>
+                                    <p>It's our attention to the small stuff, scheduling of timelines and keen project
+                                    management that makes us stand out from the rest.</p>
                                 </div>
                             </div>
                         </div>
@@ -337,8 +337,8 @@
                                 <i class="bg-color text-light icon_star_alt"></i>
                                 <div class="text">
                                     <h3><span>Top Rated Company</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <p>Wecare Sevices is one of the top rated companies in Lucknow. We are creative, while keeping a
+                                    close eye on the calendar and your budget.</p>
                                 </div>
                             </div>
                         </div>
@@ -347,9 +347,10 @@
                             <div class="box-number">
                                 <i class="bg-color text-light icon_comment_alt"></i>
                                 <div class="text">
-                                    <h3><span>Free Consultation</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <h3><span>Seek To Understand</span></h3>
+                                    <p>We take initiative to discover and understand our clients need and align them to our
+                                    contracted work to create value, seek opportunities and develop innovative solution.
+                                   </p>
                                 </div>
                             </div>
                         </div>
@@ -361,8 +362,9 @@
                                 <i class="bg-color text-light icon_tag_alt"></i>
                                 <div class="text">
                                     <h3><span>Affordable Price</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <p>Our prices are competitive and fair.Any unexpected or additional
+                                     expenses must be pre-approved by you. That's how we would like to be treated,
+                                    and that is how our clients are treated.</p>
                                 </div>
                             </div>
                         </div>
@@ -371,9 +373,10 @@
                             <div class="box-number">
                                 <i class="bg-color text-light icon_shield"></i>
                                 <div class="text">
-                                    <h3><span>Guaranteed Works</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <h3><span>One Stop Solution</span></h3>
+                                    <p>We believe construction projects should start alleviating stress, not causing it.
+                                    So we take responsibility for everything, insisting on a single point of contact for the duration
+                                    of a projects.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,8 +386,8 @@
                                 <i class="bg-color text-light icon_headphones"></i>
                                 <div class="text">
                                     <h3><span>24/7 Support</span></h3>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                        laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                                    <p>We have the most exceptional customer support team to help you all round the clock. Feel
+                                    free to connect with them regarding your queries, concern or any update.</p>
                                 </div>
                             </div>
                         </div>
@@ -405,8 +408,8 @@
 							
 						<div class="col-md-12 text-middle wow fadeInUp" data-wow-delay=".2s">
 							<div class="twentytwenty-container img-rounded shadow">
-							  <img src=<?php echo get_template_directory_uri() ."/images-kitchen/before-after/1b.jpg" ?> alt="" class="img-responsive" />							  
-							  <img src=<?php echo get_template_directory_uri() ."/images-kitchen/before-after/1a.jpg" ?> alt="" class="img-responsive" />
+							  <img src=<?php echo get_template_directory_uri() ."/images-kitchen/before-after/2b.jpg" ?> alt="" class="img-responsive" />							  
+							  <img src=<?php echo get_template_directory_uri() ."/images-kitchen/before-after/2a.jpg" ?> alt="" class="img-responsive" />
 							</div>
 						</div>
 					</div>
@@ -485,7 +488,7 @@
             <!-- section close -->
 			
 			<!-- section begin -->
-            <section id="section-contact">
+            <section id="section-contact" class=" pt-0">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
@@ -494,7 +497,7 @@
                         </div>
 
                         <div class="col-md-8 offset-md-2 wow fadeInUp">
-                            <form name="contactForm" id='contact_form' method="post" action='https://www.designesia.com/themes/archi-main/email.php'>
+                            <form name="contactForm" id='contact_form' method="post" action='http://localhost/wordpress/'>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div id='name_error' class='error'>Please enter your name.</div>
@@ -552,7 +555,7 @@
                                 $logo = wp_get_attachment_image_src( $custom_logo_id );
                             }
                             ?>
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img class="logo-small" src="<?php echo $logo ?  $logo[0]: get_template_directory_uri() ."/images-kitchen/logo.png" ?>" alt="">
                                 </a><br>
                             <!-- logo close -->
@@ -561,6 +564,15 @@
                         </div>
 
                         <div class="col-md-3">
+                        <div class="widget widget_recent_post">
+                            <h3>Our Services</h3>
+                            <ul>
+                                <li><a href="#">Interior Work</a></li>
+                                <li><a href="#">Construction Work</a></li>
+                                <li><a href="#">Maintenance</a></li>
+                                <li><a href="#">Painting and Branding</a></li>
+                            </ul>
+                        </div>
                         </div>
 
                         <div class="col-md-5">

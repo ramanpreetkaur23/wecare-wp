@@ -987,7 +987,7 @@ overflow:visible;
 		list-style:none;
 	}
 
-	#mo-menu. li ul.mega .menu-content{
+	#mo-menu.li ul.mega .menu-content{
 		padding:0px;
 	}
 
@@ -5457,8 +5457,6 @@ width:100%;
   width:100%;
 }
 
-	margin:5px;
-}
 
 /* clear fix */
 .grid:after {
@@ -8211,7 +8209,7 @@ ul#slide-list{
 	.countdown-s1 .countdown-show4 .countdown-section {
 		width: 18vw;
 	}
-	
+}
 	
 	/* -------------------------------------------------- 
 	design for 480px
@@ -8245,3 +8243,4 @@ ul#slide-list{
 		display:none;
 	}
 	}
+
